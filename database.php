@@ -24,8 +24,6 @@ class Database{
     }
     
     public function get($sql){
-        $rows = [];
-        
         $query = $this->execute($sql);
         
         while($row = $query->fetch_assoc()){
