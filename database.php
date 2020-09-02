@@ -24,7 +24,7 @@ class Database{
     }
     
     public function get($sql){
-        $rows = Array();
+        $rows = [];
         
         $query = $this->execute($sql);
         
