@@ -36,9 +36,9 @@ switch ($_SERVER['REQUEST_METHOD']) { //jenis method
         $sql .= ' "'. $headers['supplier'] .'", "'. $headers['expired'] .'")';
 
         $result = [
-                'method' => 'POST',
-                'result' => $db->execute($sql)
-            ];    
+            'method' => 'POST',
+            'result' => $db->execute($sql)
+        ];    
 
         $db->close();
         print json_encode( $result ); 
@@ -47,9 +47,9 @@ switch ($_SERVER['REQUEST_METHOD']) { //jenis method
         $db->open();
 
         $result = [
-                'method' => 'GET',
-                'result' => $db->get('select * from barang')
-            ];    
+            'method' => 'GET',
+            'result' => $db->get('select * from barang')
+        ];    
 
         $db->close();
         print json_encode( $result ); 
